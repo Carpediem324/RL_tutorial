@@ -69,7 +69,7 @@ EPS_START = 0.9         # 초기 epsilon 값 (탐험 비율)
 EPS_END = 0.05          # 최소 epsilon 값
 EPS_DECAY = 1000        # epsilon 감소 속도
 TAU = 0.005             # 타겟 네트워크 업데이트 속도 (Soft update)
-LR = 1e-4               # 학습률
+LR = 1e-2               # 학습률
 
 # 환경에서 행동(action) 수와 상태(state) 관측값 개수 획득
 n_actions = env.action_space.n

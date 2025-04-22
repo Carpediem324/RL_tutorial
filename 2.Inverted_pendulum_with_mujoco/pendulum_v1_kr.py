@@ -13,20 +13,19 @@ from collections import deque
 # 하이퍼파라미터
 # 하이퍼파라미터
 # Swing‑up 과제용 환경
+ENV_NAME       = "Pendulum-v1"                # 어떤 게임(환경)을 학습할지 정해요
+LEARNING_RATE  = 3e-4                         # 학습률: 올리면 빠르게 배우지만 불안정해지고, 내리면 느리지만 안정적이에요
+GAMMA          = 0.60                        # 할인율: 올리면 먼 미래 보상 중시해 장기 전략을 배우지만 불안정해지고, 내리면 단기 집중해 빠르게 반응해요
+LAMBDA         = 0.95                         # GAE λ: 올리면 보상 추정이 부드러워지고 분산이 줄지만 편향이 늘어나고, 내리면 편향은 줄지만 분산이 커져요
+EPS_CLIP       = 0.2                          # 클리핑 범위: 올리면 정책 변화를 크게 허용해 공격적이고 불안정해지며, 내리면 보수적이고 느려져요
+K_EPOCH        = 10                           # 반복 학습 횟수: 올리면 같은 데이터를 많이 학습해 과적합 위험이 있고 계산 비용이 커지며, 내리면 학습 효율이 떨어져요
+ROLLOUT_LENGTH = 2048                         # 롤아웃 길이: 올리면 보상 추정이 안정적이지만 업데이트 간격이 길어지고, 내리면 자주 업데이트하지만 불안정해져요
+BATCH_SIZE     = 256                          # 배치 크기: 올리면 업데이트가 안정적이지만 메모리·연산 비용이 커지고, 내리면 빠르지만 그라디언트 노이즈가 커져요
+MAX_EPISODES   = 1000                         # 전체 에피소드 수: 올리면 더 오래 학습해 성능 향상의 여지가 있지만 시간·자원이 많이 들고, 내리면 빠르지만 학습이 부족해질 수 있어요
 
-ENV_NAME = "InvertedPendulum-v4"        # 이미 수직으로 세워진 채 학습 시작
-
-LEARNING_RATE  = 3e-4                   # 한 번에 조금씩(작게) 배울지 크게 배울지 정해요
-GAMMA          = 0.99                   # 미래에 받을 점수를 얼마나 중요하게 볼지 정해요
-LAMBDA         = 0.95                   # 보상을 계산할 때 조금 더 부드럽게 해줘요
-EPS_CLIP       = 0.2                    # 학습할 때 정책이 갑자기 너무 바뀌지 않게 제한해요
-K_EPOCH        = 10                     # 모은 데이터를 몇 번 반복해서 공부할지 정해요
-ROLLOUT_LENGTH = 2048                   # 한 번에 얼마나 많은 움직임(스텝)을 모을지 정해요
-BATCH_SIZE     = 256                    # 모은 데이터 중에 한 번에 몇 개씩 꺼내서 공부할지 정해요
-MAX_EPISODES   = 1000                   # 전체로 게임을 몇 번 반복할지 정해요
 
 SAVE_DIR         = os.path.dirname(os.path.abspath(__file__))
-FINAL_MODEL_NAME = "ppo_invertedpendulum_final.pth"
+FINAL_MODEL_NAME = "ppo_pendulum-v1_final.pth"
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
