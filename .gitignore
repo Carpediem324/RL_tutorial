@@ -3,3 +3,4 @@
 *.pth
 *.pt
 /mujoco_venv/
+/myvenv/

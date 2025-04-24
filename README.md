@@ -38,8 +38,10 @@ pip3 install gym[mujoco]
 pip3 install tqdm
 pip3 install stable_baselines3
 pip3 install mujoco_py
+pip3 install pygame
 ```
 
+https://www.roboti.us/license.html
 mujoco200_linux설치 후 ~/.mujoco/로 복사
 라이센스키도 받아서 복사
 
