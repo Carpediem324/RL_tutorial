@@ -63,3 +63,10 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 ```
 sudo apt-get update && sudo apt-get install patchelf
 ```
+
+# mujoco_py 안쓰고 그냥 mujoco쓰기
+
+```
+pip uninstall mujoco-py
+pip install mujoco gym mujoco-python-viewer
+```
