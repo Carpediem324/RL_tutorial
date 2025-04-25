@@ -68,5 +68,6 @@ sudo apt-get update && sudo apt-get install patchelf
 
 ```
 pip uninstall mujoco-py
+pip install generate-parameter-library-py==0.4.0
 pip install mujoco gym mujoco-python-viewer
 ```
