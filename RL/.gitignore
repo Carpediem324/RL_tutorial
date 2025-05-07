@@ -1,0 +1,6 @@
+/env/
+/runs/
+*.pth
+*.pt
+/mujoco_venv/
+/myvenv/

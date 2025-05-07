@@ -1,0 +1,2 @@
+2025-05-05 13:13:06,707 | INFO | Creating 8 parallel environments
+2025-05-05 13:13:06,781 | ERROR | 환경 생성 오류: The render_mode must be 'rgb_array', not None

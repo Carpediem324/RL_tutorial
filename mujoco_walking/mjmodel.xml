@@ -1,0 +1,111 @@
+<mujoco model="jethexa">
+  <compiler angle="radian" autolimits="true"/>
+  <statistic meansize="98.7202" extent="344.17" center="-5.15337 0.0485608 16.3625"/>
+  <asset>
+    <mesh name="body" file="body.stl"/>
+    <mesh name="body_b" file="body_b.stl"/>
+    <mesh name="g4" file="g4.stl"/>
+    <mesh name="dabai" file="dabai.stl"/>
+    <mesh name="coxa" file="coxa.stl"/>
+    <mesh name="R_femur" file="R_femur.stl"/>
+    <mesh name="R_tibia" file="R_tibia.stl"/>
+    <mesh name="L_femur" file="L_femur.stl"/>
+    <mesh name="L_tibia" file="L_tibia.stl"/>
+  </asset>
+  <worldbody>
+    <geom pos="0 0 0.075" type="mesh" rgba="0.4 0.9 0.4 1" mesh="body"/>
+    <geom pos="0 0 0.075" type="mesh" rgba="0.4 0.9 0.4 1" mesh="body_b"/>
+    <geom pos="-0.023 0 0.142" quat="0.707035 0 0 0.707179" type="mesh" rgba="0.2 0.2 0.2 1" mesh="g4"/>
+    <geom pos="0.062455 0 0.13" quat="0.707107 0 0 0.707107" type="mesh" rgba="0.2 0.2 0.2 1" mesh="dabai"/>
+    <body name="coxa_RR" pos="-0.093205 -0.05098 0.075" quat="0.382683 0 0 -0.92388">
+      <inertial pos="0 0 0" mass="1e-05" diaginertia="1 1 1"/>
+      <joint name="coxa_joint_RR" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" damping="0.7"/>
+      <geom type="mesh" rgba="0.4 0.9 0.4 1" mesh="coxa"/>
+      <body name="femur_RR" pos="0.0450503 0 0" quat="0.707107 0.707107 0 0">
+        <inertial pos="0 0 0" quat="0.877583 0 0 0.479426" mass="1e-05" diaginertia="1 1 1"/>
+        <joint name="femur_joint_RR" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" damping="0.7"/>
+        <geom type="mesh" rgba="0.2 0.2 0.2 1" mesh="R_femur"/>
+        <body name="tibia_RR" pos="0.07703 0 0" quat="0.737277 0 0 -0.67559">
+          <inertial pos="0 0 0" mass="1e-05" diaginertia="1 1 1"/>
+          <joint name="tibia_joint_RR" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" damping="0.7"/>
+          <geom pos="0 0 0" quat="0.999048 0 0 -0.0436212" type="mesh" rgba="0.2 0.2 0.2 1" mesh="R_tibia"/>
+        </body>
+      </body>
+    </body>
+    <body name="coxa_RM" pos="0 -0.073535 0.075" quat="0.707107 0 0 -0.707107">
+      <inertial pos="0 0 0" mass="1e-05" diaginertia="1 1 1"/>
+      <joint name="coxa_joint_RM" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" damping="0.7"/>
+      <geom type="mesh" rgba="0.4 0.9 0.4 1" mesh="coxa"/>
+      <body name="femur_RM" pos="0.0450503 0 0" quat="0.707107 0.707107 0 0">
+        <inertial pos="0 0 0" quat="0.877583 0 0 0.479426" mass="1e-05" diaginertia="1 1 1"/>
+        <joint name="femur_joint_RM" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" damping="0.7"/>
+        <geom type="mesh" rgba="0.2 0.2 0.2 1" mesh="R_femur"/>
+        <body name="tibia_RM" pos="0.07703 0 0" quat="0.737277 0 0 -0.67559">
+          <inertial pos="0 0 0" mass="1e-05" diaginertia="1 1 1"/>
+          <joint name="tibia_joint_RM" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" damping="0.7"/>
+          <geom pos="0 0 0" quat="0.999048 0 0 -0.0436212" type="mesh" rgba="0.2 0.2 0.2 1" mesh="R_tibia"/>
+        </body>
+      </body>
+    </body>
+    <body name="coxa_RF" pos="0.093205 -0.05098 0.075" quat="0.92388 0 0 -0.382683">
+      <inertial pos="0 0 0" mass="1e-05" diaginertia="1 1 1"/>
+      <joint name="coxa_joint_RF" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" damping="0.7"/>
+      <geom type="mesh" rgba="0.4 0.9 0.4 1" mesh="coxa"/>
+      <body name="femur_RF" pos="0.0450503 0 0" quat="0.707107 0.707107 0 0">
+        <inertial pos="0 0 0" quat="0.877583 0 0 0.479426" mass="1e-05" diaginertia="1 1 1"/>
+        <joint name="femur_joint_RF" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" damping="0.7"/>
+        <geom type="mesh" rgba="0.2 0.2 0.2 1" mesh="R_femur"/>
+        <body name="tibia_RF" pos="0.07703 0 0" quat="0.737277 0 0 -0.67559">
+          <inertial pos="0 0 0" mass="1e-05" diaginertia="1 1 1"/>
+          <joint name="tibia_joint_RF" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" damping="0.7"/>
+          <geom pos="0 0 0" quat="0.999048 0 0 -0.0436212" type="mesh" rgba="0.2 0.2 0.2 1" mesh="R_tibia"/>
+        </body>
+      </body>
+    </body>
+    <body name="coxa_LR" pos="-0.093205 0.05098 0.075" quat="0.382683 0 0 0.92388">
+      <inertial pos="0 0 0" mass="1e-05" diaginertia="1 1 1"/>
+      <joint name="coxa_joint_LR" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" damping="0.7"/>
+      <geom type="mesh" rgba="0.4 0.9 0.4 1" mesh="coxa"/>
+      <body name="femur_LR" pos="0.0450503 0 0" quat="0.707107 -0.707107 0 0">
+        <inertial pos="0 0 0" quat="0.877583 0 0 0.479426" mass="1e-05" diaginertia="1 1 1"/>
+        <joint name="femur_joint_LR" pos="0 0 0" axis="0 0 -1" range="-3.14 3.14" damping="0.7"/>
+        <geom type="mesh" rgba="0.2 0.2 0.2 1" mesh="L_femur"/>
+        <body name="tibia_LR" pos="0.07703 0 0" quat="0.737277 0 0 0.67559">
+          <inertial pos="0 0 0" mass="1e-05" diaginertia="1 1 1"/>
+          <joint name="tibia_joint_LR" pos="0 0 0" axis="0 0 -1" range="-3.14 3.14" damping="0.7"/>
+          <geom pos="0 0 0" quat="0.999048 0 0 0.0436212" type="mesh" rgba="0.2 0.2 0.2 1" mesh="L_tibia"/>
+        </body>
+      </body>
+    </body>
+    <body name="coxa_LM" pos="0 0.07353 0.075" quat="0.707107 0 0 0.707107">
+      <inertial pos="0 0 0" mass="1e-05" diaginertia="1 1 1"/>
+      <joint name="coxa_joint_LM" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" damping="0.7"/>
+      <geom type="mesh" rgba="0.4 0.9 0.4 1" mesh="coxa"/>
+      <body name="femur_LM" pos="0.0450503 0 0" quat="0.707107 -0.707107 0 0">
+        <inertial pos="0 0 0" quat="0.877583 0 0 0.479426" mass="1e-05" diaginertia="1 1 1"/>
+        <joint name="femur_joint_LM" pos="0 0 0" axis="0 0 -1" range="-3.14 3.14" damping="0.7"/>
+        <geom type="mesh" rgba="0.2 0.2 0.2 1" mesh="L_femur"/>
+        <body name="tibia_LM" pos="0.07703 0 0" quat="0.737277 0 0 0.67559">
+          <inertial pos="0 0 0" mass="1e-05" diaginertia="1 1 1"/>
+          <joint name="tibia_joint_LM" pos="0 0 0" axis="0 0 -1" range="-3.14 3.14" damping="0.7"/>
+          <geom pos="0 0 0" quat="0.999048 0 0 0.0436212" type="mesh" rgba="0.2 0.2 0.2 1" mesh="L_tibia"/>
+        </body>
+      </body>
+    </body>
+    <body name="coxa_LF" pos="0.093205 0.05098 0.075" quat="0.92388 0 0 0.382683">
+      <inertial pos="0 0 0" mass="1e-05" diaginertia="1 1 1"/>
+      <joint name="coxa_joint_LF" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" damping="0.7"/>
+      <geom type="mesh" rgba="0.4 0.9 0.4 1" mesh="coxa"/>
+      <body name="femur_LF" pos="0.0450503 0 0" quat="0.707107 -0.707107 0 0">
+        <inertial pos="0 0 0" quat="0.877583 0 0 0.479426" mass="1e-05" diaginertia="1 1 1"/>
+        <joint name="femur_joint_LF" pos="0 0 0" axis="0 0 -1" range="-3.14 3.14" damping="0.7"/>
+        <geom type="mesh" rgba="0.2 0.2 0.2 1" mesh="L_femur"/>
+        <body name="tibia_LF" pos="0.07703 0 0" quat="0.737277 0 0 0.67559">
+          <inertial pos="0 0 0" mass="1e-05" diaginertia="1 1 1"/>
+          <joint name="tibia_joint_LF" pos="0 0 0" axis="0 0 -1" range="-3.14 3.14" damping="0.7"/>
+          <geom pos="0 0 0" quat="0.999048 0 0 0.0436212" type="mesh" rgba="0.2 0.2 0.2 1" mesh="L_tibia"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>
