@@ -7,3 +7,4 @@ mujoco_py
 numpy==1.22.4
 pygame
 tensorboard
+urdfpy

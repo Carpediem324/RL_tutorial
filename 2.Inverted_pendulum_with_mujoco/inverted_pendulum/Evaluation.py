@@ -108,10 +108,10 @@ if __name__ == "__main__":
     print("===== 사용할 환경 선택 =====")
     for i, name in enumerate(ENV_LIST, 1):
         print(f"{i}. {name}")
-    idx = int(input("환경 번호를 입력하세요: ")) - 1
+    idx = 2
     env_name = ENV_LIST[idx]
 
-    model_filename = f"ppo_{env_name.lower()}_final.pth"
+    model_filename = f"ppo_invertedpendulum_final.pth"
     model_path = os.path.join(os.path.dirname(__file__), model_filename)
 
     evaluate_model(env_name, model_path, num_episodes=5, render=True)
